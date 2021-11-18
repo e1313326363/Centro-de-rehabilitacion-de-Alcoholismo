@@ -489,6 +489,7 @@ nombre_paciente as NombrePaciente
 from tratamiento
 inner join paciente on tratamiento.id_paciente=paciente.id_paciente
 inner join profesional on paciente.id_profesional=profesional.id_profesional
+
 --Por año el número de ingresos y salidas correctas y escapes que se dan.
 select
 extract(year from fecha_ingreso) as año,

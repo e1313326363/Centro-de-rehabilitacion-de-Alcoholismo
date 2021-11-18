@@ -16,6 +16,7 @@ create table INGRESO (
    CANTIDAD_INGRESOS    INT4                 not null,
    CANTIDADSALIDAS_CORRECTAS INT4                 not null,
    CANTIDADSALIDAS_INCORRECTAS INT4                 not null,
+   INCIDENTE_VIOLENTO   INT4                 not null,
    constraint PK_INGRESO primary key (ID_INGRESO)
 );
 
@@ -382,16 +383,16 @@ values (4,4,'Mariana','Solorzano','1303988313','Femenino','Mestizo','1999-10-26'
 insert into paciente (id_paciente,id_profesional, nombre_paciente, apellido_paciente, ci_paciente, sexo_paciente, raza_paciente, fecha_nacimiento)
 values (5,5,'Yanina','Arteaga','1305489795','Femenino','Mestizo','1999-05-15');
 --Tabla Ingreso
-insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas)
-values (1,1,'2020-10-05','2021-01-01','2021-01-15',1,1,0);
-insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas)
-values (2,2,'2020-05-10','2021-05-04','2021-05-15',2,1,1);
-insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas)
-values (3,3,'2020-11-19','2021-10-09','2021-10-15',2,1,1);
-insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas)
-values (4,4,'2020-11-19','2021-10-09','2021-10-15',1,1,0);
-insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas)
-values (5,5,'2020-10-05','2021-01-01','2021-01-15',2,1,1);
+insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas,incidente_violento)
+values (1,1,'2020-10-05','2021-01-01','2021-01-15',1,1,0,0);
+insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas,incidente_violento)
+values (2,2,'2020-05-10','2021-05-04','2021-05-15',2,1,1,1);
+insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas,incidente_violento)
+values (3,3,'2020-11-19','2021-10-09','2021-10-15',2,1,1,0);
+insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas,incidente_violento)
+values (4,4,'2020-11-19','2021-10-09','2021-10-15',1,1,0,1);
+insert into ingreso (id_ingreso,id_paciente,fecha_ingreso,fecha_salida,fecha_ceremoniadesalida,cantidad_ingresos,cantidadsalidas_correctas,cantidadsalidas_incorrectas,incidente_violento)
+values (5,5,'2020-10-05','2021-01-01','2021-01-15',2,1,1,0);
 --Tabla Servicio
 insert into servicio (id_servicio,id_paciente,tipo_servicio,cantidad_servicio,observaciones_servicio) 
 values (1,1,'Interno',5,'Desintoxicacion');
